@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 
-import './css/index.css'
+import './index.css'
 
 class Home extends Component {
   constructor() {
@@ -17,15 +17,16 @@ class Home extends Component {
     //let fbData = JSON.parse(localStorage.getItem('fbData'));
     let googleData = JSON.parse(localStorage.getItem('googleData'));
 
-    if (/* !fbData &&  */!googleData) {
+    if (/* !fbData && ! */googleData) {
       this.setState({ isLogout: true });
-    }
-    /* if (fbData) {
-      this.setState({ profileImage: fbData.picture, fullName: fbData.name });
-    }else  */
-    if (googleData) {
       this.setState({ profileImage: googleData.picture, fullName: googleData.name });
     }
+   /*  if (fbData) {
+      this.setState({ profileImage: fbData.picture, fullName: fbData.name });
+    }else 
+    if (googleData) {
+      this.setState({ profileImage: googleData.picture, fullName: googleData.name });
+    } */
   }
   onLogout(e) {
     //TODO Setear todas las variables de mi local storage vacias, y redireccionar a inicio
@@ -44,7 +45,7 @@ class Home extends Component {
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>{ this.state.fullName }</li>
               <li>
-                <img className="circle Home-avatar" src={ this.state.profileImage }/>
+                <img alt={ this.props.alt } className="circle Home-avatar" src={ this.state.profileImage }/>
               </li>
               <li>
                 <i onClick={ this.onLogout } className="Home-logout fa fa-power-off"></i>

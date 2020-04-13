@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import GoogleLogin from 'react-google-login'
 import { Redirect } from 'react-router-dom'
 
-import './css/index.css'
+import './index.css'
 import 'materialize-css/dist/css/materialize.min.css'
 
 class Login extends Component {
@@ -19,11 +19,12 @@ class Login extends Component {
     this.onFailure = this.onFailure.bind(this);
   }
   componentWillMount() {
-    if (/* localStorage.getItem("fbData") ||  */localStorage.getItem("googleData")) {
+    if (localStorage.getItem("fbData") || localStorage.getItem("googleData")) {
       this.setState({ isLogged: true });
     }
   }
-  /* responseFacebook(response) {
+/*   responseFacebook(response) {
+    console.log("entro aquiiiii");
     localStorage.setItem("fbData", JSON.stringify({
       token: response.token,
       email: response.email,
@@ -35,12 +36,14 @@ class Login extends Component {
     this.setState({ isLogged: true });
   } */
   responseGoogle(response) {
+    console.log("entro aquiiiii");
     localStorage.setItem("googleData", JSON.stringify({
       token: response.token,
       email: response.profileObj.email,
       name: response.profileObj.name,
       picture: response.profileObj.imageUrl,
       social: 'google'
+      
     }));
     this.setState({ isLogged: true });
   }
@@ -57,7 +60,7 @@ class Login extends Component {
             <div className="card">
               <div className="card-content">
                 {/* <FacebookLogin
-                  appId="1623073147751611"
+                  appId="207686160677151"
                   autoload={ false }
                   fields="name, email, picture.width(120)"
                   callback={ this.responseFacebook }
@@ -73,8 +76,9 @@ class Login extends Component {
                   onFailure={ this.onFailure }
                   className="waves-effect waves-light btn red lighten-1">
                     <i className="fa fa-google" aria-hidden="true"></i>
-                    <span>Iniciar Sesión</span>
+                    <span>Login with Google</span>
                 </GoogleLogin>
+
               </div>
             </div>
           </div>

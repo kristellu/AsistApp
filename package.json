@@ -1,11 +1,13 @@
 {
-  "name": "AsistApp",
+  "name": "social-sign-in",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "materialize-css": "^0.100.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-google-login": "^5.1.3",
+    "react-facebook-login": "^3.7.2",
+    "react-google-login": "^3.0.4",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
