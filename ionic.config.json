@@ -1,0 +1,7 @@
+{
+  "name": "asistapp",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
