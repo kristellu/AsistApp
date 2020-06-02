@@ -5,12 +5,12 @@ Taking attendance of students by reading QR code.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
 - [App Preview](#app-preview)
 - [Deploying](#deploying)
   - [Progressive Web App](#progressive-web-app)
   - [Android](#android)
   - [iOS](#ios)
+- [Credits](#credits)
 
 ## Getting Started
 
