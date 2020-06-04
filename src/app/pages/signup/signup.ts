@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./signup.scss'],
 })
 export class SignupPage {
-  signup: UserOptions = { username: '', password: '' };
+  signup: UserOptions = { username: '', password: '', email: '' };
   submitted = false;
 
   constructor(
@@ -22,12 +22,12 @@ export class SignupPage {
     public userData: UserData
   ) {}
 
-  onSignup(form: NgForm) {
+  async onSignup(form: NgForm) {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.signup(this.signup.username);
-      this.router.navigateByUrl('/app/tabs/schedule');
+      let response = await this.userData.signup(this.signup.username, this.signup.password, this.signup.email);
+      if (!response.error) this.router.navigateByUrl('/app/tabs/schedule');
     }
   }
 }

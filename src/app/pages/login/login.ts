@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserOptions = { username: '', password: '', email: '' };
   submitted = false;
 
   constructor(
@@ -22,12 +22,12 @@ export class LoginPage {
     public router: Router
   ) { }
 
-  onLogin(form: NgForm) {
+  async onLogin(form: NgForm) {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.login(this.login.username);
-      this.router.navigateByUrl('/app/tabs/schedule');
+      let response = await this.userData.login(this.login.username, this.login.password);
+      if(!response.error) this.router.navigateByUrl('/app/tabs/schedule');
     }
   }
 

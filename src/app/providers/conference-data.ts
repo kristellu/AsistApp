@@ -17,9 +17,9 @@ export class ConferenceData {
     if (this.data) {
       return of(this.data);
     } else {
-      return this.http
-        .get('assets/data/data.json')
-        .pipe(map(this.processData, this));
+        
+      let schedule = this.http.get('assets/data/data.json');
+      return schedule.pipe(map(this.processData, this));
     }
   }
 
