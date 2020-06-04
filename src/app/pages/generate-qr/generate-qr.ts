@@ -5,11 +5,12 @@ import { PopoverController } from '@ionic/angular';
 import { PopoverPage } from '../about-popover/about-popover';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
-  styleUrls: ['./about.scss'],
+  selector: 'page-generate-qr',
+  templateUrl: 'generate-qr.html',
+  styleUrls: ['./generate-qr.scss'],
 })
-export class AboutPage {
+// tslint:disable-next-line: component-class-suffix
+export class GenerateQrPage {
   location = 'madison';
   conferenceDate = '2047-05-17';
 

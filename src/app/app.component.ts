@@ -20,25 +20,30 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Schedule',
+      title: 'Horario',
       url: '/app/tabs/schedule',
       icon: 'calendar'
     },
     {
-      title: 'Speakers',
+      title: 'Revisar Asistencia',
       url: '/app/tabs/speakers',
       icon: 'people'
-    },
+    }, /*
     {
       title: 'Map',
       url: '/app/tabs/map',
       icon: 'map'
+    }, */
+    {
+      title: 'Generar QR',
+      url: '/app/tabs/generateQr',
+      icon: 'qr-code'
     },
     {
-      title: 'About',
-      url: '/app/tabs/about',
-      icon: 'information-circle'
-    }
+      title: 'Leer QR',
+      url: '/app/tabs/readQr',
+      icon: 'phone-portrait'
+    },
   ];
   loggedIn = false;
   dark = false;

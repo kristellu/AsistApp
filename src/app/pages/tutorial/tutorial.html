@@ -1,7 +1,7 @@
 <ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip" style="margin:2em;">Skip</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -11,26 +11,25 @@
     <ion-slide>
       <img src="assets/img/tutorial/students.png" class="slide-image" />
       <h2 class="slide-title">
-        Welcome to
+        Bienvenido a
         <b>AsistApp</b>
       </h2>
-      <p>
-        
-        <b>AsistApp</b> la manera más sencilla de tomar asistencias en clases.
-      </p>
+      <h5>
+        <b>AsistApp</b>, tomar asistencias nunca había sido tan sencillo y agradable.
+      </h5>
     </ion-slide>
 
     <ion-slide>
       <img src="assets/img/tutorial/mobile_tasks.png" class="slide-image" />
       <h2 class="slide-title">¿Qué puedo hacer en AsistApp?</h2>
-      <p>
-        Tomar asistencias a clases y llevar seguimiento del cumplimiento de estudiantes. Todo mediante lectura de código QR.</p>
+      <h5>
+        Tomar asistencias a clases y llevar seguimiento del cumplimiento de estudiantes. Todo mediante lectura de código QR.</h5>
     </ion-slide>
 
     <ion-slide>
       <img src="assets/img/tutorial/calendar.png" class="slide-image" />
       <h2 class="slide-title">¿Cómo lo hago?</h2>
-      <p>¡Fácil! Registra tus cursos y genera/lee el QR correspondiente.</p>
+      <h5>¡Fácil! Registra tus cursos y genera/lee el QR correspondiente.</h5>
       <ion-button fill="clear" (click)="startApp()">
         Comenzar
         <ion-icon slot="end" name="arrow-forward"></ion-icon>

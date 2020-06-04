@@ -11,10 +11,7 @@ import { PopoverController } from '@ionic/angular';
       <ion-item button (click)="close('https://ionicframework.com/docs/')">
         <ion-label>Documentation</ion-label>
       </ion-item>
-      <ion-item button (click)="close('https://showcase.ionicframework.com')">
-        <ion-label>Showcase</ion-label>
-      </ion-item>
-      <ion-item button (click)="close('https://github.com/ionic-team/ionic')">
+      <ion-item button (click)="close('https://github.com/kristellu/AsistApp')">
         <ion-label>GitHub Repo</ion-label>
       </ion-item>
       <ion-item button (click)="support()">

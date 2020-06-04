@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-import { AboutPage } from './about';
+import { ReadQrPage } from './read-qr';
 import { PopoverPage } from '../about-popover/about-popover';
-import { AboutPageRoutingModule } from './about-routing.module';
+import { ReadQrRoutingModule } from './read-qr-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AboutPageRoutingModule
+    ReadQrRoutingModule
   ],
-  declarations: [AboutPage, PopoverPage],
+  declarations: [ReadQrPage, PopoverPage],
   entryComponents: [PopoverPage],
-  bootstrap: [AboutPage],
+  bootstrap: [ReadQrPage],
 })
-export class AboutModule {}
+export class ReadQrModule {}

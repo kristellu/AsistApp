@@ -40,20 +40,20 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'map',
+        path: 'generateQr',
         children: [
           {
             path: '',
-            loadChildren: () => import('../map/map.module').then(m => m.MapModule)
+            loadChildren: () => import('../generate-qr/generate-qr.module').then(m => m.GenerateQrModule)
           }
         ]
       },
       {
-        path: 'about',
+        path: 'readQr',
         children: [
           {
             path: '',
-            loadChildren: () => import('../about/about.module').then(m => m.AboutModule)
+            loadChildren: () => import('../read-qr/read-qr.module').then(m => m.ReadQrModule)
           }
         ]
       },
